@@ -6,6 +6,13 @@ pipeline {
 		    checkout scm
 		}
 	   }
+           stage (' Maven Tool Build and Test Code') {
+		steps {
+		     script {
+			  sh 'mvn clean install'
+		     }
+		}
+	   }	   
 	}
 }	
 	    
